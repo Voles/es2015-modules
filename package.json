@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/Voles/es6-modules",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
