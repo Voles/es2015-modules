@@ -4,6 +4,9 @@ var gulp      = require('gulp'),
   browserify  = require('browserify'),
   babelify    = require('babelify'),
   source      = require('vinyl-source-stream'),
+  buffer      = require('vinyl-buffer'),
+  sourcemaps  = require('gulp-sourcemaps'),
+  uglify      = require('gulp-uglify'),
   del         = require('del'),
   target      = 'dist';
 
@@ -19,6 +22,10 @@ gulp.task('build:js', function () {
     .transform(babelify)
     .bundle()
     .pipe(source('app.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(target));
 });
 
