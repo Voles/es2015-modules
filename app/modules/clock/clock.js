@@ -1,4 +1,4 @@
-export default class Clock {
+export default class {
   getTime() {
     var date = new Date();
     return date.getTime();
