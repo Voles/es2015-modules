@@ -1,5 +1,6 @@
-import Clock from 'modules/clock/clock';
+import Calculator from 'modules/calculator';
 
-var clock = new Clock();
+var calculator = new Calculator(),
+  result = calculator.sum(1, 2);
 
-console.log(clock.getTime());
+console.log(`1 + 2 = ${result}`);
